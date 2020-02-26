@@ -1,0 +1,6 @@
+<h2>Employee: <%=@employee.fullName%></h2>
+<label>Alias: <%= @employee.alias%></label><br>
+<label>Title: <%= @employee.title%></label><br>
+<label>Office: <%= @employee.office%></label><br>
+ <%= image_tag(@employee.img_url, {:style => "width:50%;"}) %><br>
+<label><%= link_to @employee.dog.name, dog_path(@employee.dog)%></label>

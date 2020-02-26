@@ -1,0 +1,9 @@
+<h1>Show page for <%=@dog.name%></h1>
+<label>Dog Name: <%=@dog.name%></label><br>
+<label>Dog Breed: <%=@dog.breed%></label><br>
+<label>Dog Age: <%=@dog.age%></label><br><br>
+
+<h3>Employee Listed to this dog</h3>
+<% @dog.employees.each do |employee|%>
+<label>Employee: <%= link_to employee.fullName, employee_path(employee)%></label><br>
+<%end%>
